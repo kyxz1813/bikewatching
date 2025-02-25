@@ -11,12 +11,13 @@
   <title>Bikewatching</title>
 </head>
 <body>
+  <br>
   <h1>🚴🏼‍♀️ Bikewatching</h1>
 
   <div id="map">
     <svg></svg>
   </div>
-
+ <br>
   <span>
     Filter by time: 
     <input id="time-slider" type="range" min="-1" max="1440" step="1" value="-1">
@@ -31,6 +32,13 @@
     <div style="--departure-ratio: 0">More arrivals</div>
   </div>
 
+<div>
+  <ul>
+    <li>The underlying map shows Boston area roads and labels of neighborhoods. You can pan and zoom around as you would with services like Google Maps.</li>
+    <li>The green lines show bike lanes. The circles represent individual BlueBike stations. The size of each circle represents the amount of traffic at each station, while the color represents whether most traffic is entering or leaving the station. </li>
+    <li>There is a slider at the bottom that allows filtering the data for traffic at specific times of the day, and the circles will change size and color accordingly.</li>
+  </ul>
+</div>
   <!-- Mapbox GL JS JavaScript -->
   <script src="https://api.mapbox.com/mapbox-gl-js/v2.15.0/mapbox-gl.js"></script>
   

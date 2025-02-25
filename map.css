@@ -1,7 +1,7 @@
 html, body {
     margin: 0;
-    padding: 5;
-    height: 100%;
+    padding: 10;
+    height: 110%;
     width: 100%;
     display: flex;
     justify-content: center; /* Center horizontally */
