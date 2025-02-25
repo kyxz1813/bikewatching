@@ -1,0 +1,89 @@
+body {
+    font: 100%/1.5 system-ui, sans-serif;
+    display: flex;
+    flex-flow: column;
+    max-width: 80em;
+    min-height: 100vh;
+    box-sizing: border-box;
+    margin: auto;
+    padding: 1em;
+}
+
+/* The D3 overlay SVG appended to map.getCanvasContainer() */
+.d3-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    pointer-events: none; /* Allows map interactions to pass through */
+  }
+  
+/* Time controls container positioned on top of the map */
+#time-controls {
+position: absolute;
+bottom: 20px;
+left: 20px;
+background: rgba(255, 255, 255, 0.85);
+padding: 10px;
+border-radius: 4px;
+box-shadow: 0 1px 3px rgba(0, 0, 0, 0.3);
+}
+
+/* Style for the time slider input */
+#time-slider {
+width: 200px;
+margin: 5px 0;
+}
+
+/* Style for the selected time text */
+#selected-time {
+font-weight: bold;
+margin-left: 10px;
+}
+
+/* any-time label styling */
+#any-time {
+font-style: italic;
+color: #555;
+}
+
+/* Legend container: center it, space out items */
+.legend {
+    display: flex;
+    justify-content: center;
+    gap: 1em;
+    margin: 20px auto; /* some vertical spacing */
+    font-size: 14px;
+  }
+  
+  /* Each legend item: “More departures,” “Balanced,” “More arrivals” */
+  .legend div {
+    display: flex;
+    align-items: center;
+    gap: 0.4em;
+  }
+  
+  /* For each item, create a colored circle via the ::before pseudo-element */
+  .legend div::before {
+    content: "";
+    display: inline-block;
+    width: 14px;
+    height: 14px;
+    border-radius: 50%;
+    margin-right: 2px;
+  }
+  
+  /* 1st item: steelblue circle */
+  .legend div:nth-child(1)::before {
+    background-color: steelblue;
+  }
+  
+  /* 2nd item: gray circle */
+  .legend div:nth-child(2)::before {
+    background-color: #be81cf;
+  }
+  
+  /* 3rd item: darkorange circle */
+  .legend div:nth-child(3)::before {
+    background-color: darkorange;
+  }
+  
